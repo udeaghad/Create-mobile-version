@@ -3,8 +3,7 @@
 # SET UP MOBILE VERSION
 
 > Description of the project
-The project was done to test the knowledge of linters, HTML, CSS and use of figma 
-
+The project was done to test the knowledge of linters, HTML, CSS and use of figma code
 ## Built With
 
 - HTML
