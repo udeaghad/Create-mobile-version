@@ -2,12 +2,27 @@
 
 # SET UP MOBILE VERSION
 
-> Description of the project
-The project was done to test the knowledge of linters, HTML, CSS and use of figma code
+The project was done to test the knowledge of linters, HTML, CSS and use of figma 
 ## Built With
 
 - HTML
 - CSS
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+
+Prerequisites: 
+   - Signup/login to your github account and go to https://github.com/udeaghad/Create-mobile-version.
+   
+Setup
+   - Clone the repository on github to your local terminal
+Install
+   - Ensure you have git installed on your terminal
+  
+Usage
+   - Open the index.html file with your browser to view the webpage
 
 
 

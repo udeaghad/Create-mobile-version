@@ -13,6 +13,7 @@ header {
 }
 
 .logo {
+  text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   font-weight: bolder;
@@ -26,13 +27,12 @@ header {
 }
 
 .bar {
-  height: 10px;
-  width: 80px;
-  background-color: #36b37f;
+  height: 40px;
   margin: 7px;
 }
 
-.intro {
+.intro,
+.who-am-i {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
   font-size: 60px;
@@ -42,7 +42,7 @@ header {
 }
 
 .about-me {
-  margin: 150px 150px 0 150px;
+  margin: 0 24px;
   display: flex;
   flex-direction: column;
 }
