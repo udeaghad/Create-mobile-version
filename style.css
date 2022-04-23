@@ -42,7 +42,7 @@ header {
 }
 
 .about-me {
-  margin: 0 24px;
+  margin: 24px 24px;
   display: flex;
   flex-direction: column;
 }
@@ -53,8 +53,7 @@ header {
 
 .i-can-do {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 24px;
   color: #172b4d;
   text-align: center;
 }
@@ -75,4 +74,144 @@ header {
 
 .bar:active {
   background-color: #008552;
+}
+
+.collapse-button {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.works-heading {
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #172b4d;
+  font-weight: bold;
+  margin: 0;
+}
+
+.place-holder {
+  height: 800px;
+  border: 1px solid #d0d9d4;
+  border-radius: 8px;
+  background-color: #ebf0ee;
+  margin: 24px 24px;
+  display: grid;
+  align-items: flex-end;
+}
+
+.post-stories {
+  height: 230px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.multi-post,
+.gain {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  color: #3a4a42;
+}
+
+.gain {
+  font-size: 24px;
+}
+
+.lang {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.lang li button {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #3a4a42;
+  background-color: #ebf0ee;
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 4px;
+  flex-wrap: wrap;
+}
+
+.project-button {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: #fff;
+  background-color: #36b37f;
+  height: 70px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  padding: 5px;
+}
+
+.about-me-pg {
+  margin: 24px 24px;
+  background-image: url("asset/images/back-img-about-me.png");
+  background-size: auto;
+  height: 500px;
+  display: grid;
+  padding: 0;
+}
+
+.resume {
+  width: 160px;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 0;
+}
+
+.diff-lang {
+  height: 500px;
+  background-color: #ebf0ee;
+  display: grid;
+  border-radius: 8px;
+  margin: 24px 24px;
+  flex-wrap: wrap;
+}
+
+.center-logo {
+  flex-direction: row;
+  margin-top: 24px;
+  width: 300px;
+  display: flex;
+  justify-self: center;
+}
+
+.languages {
+  color: #344563;
+  font-size: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+.diff-lang li button {
+  background-color: #fff;
+  flex-wrap: wrap;
+}
+
+.button:hover {
+  background-color: #36b37f;
+}
+
+.button:active {
+  background-color: #008552;
+  transform: translateY(3px);
 }
