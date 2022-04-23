@@ -1,5 +1,5 @@
 main {
-  display: flex;
+  display: grid;
   flex-direction: column;
 }
 
@@ -93,12 +93,12 @@ header {
 }
 
 .place-holder {
+  display: grid;
   height: 800px;
   border: 1px solid #d0d9d4;
   border-radius: 8px;
   background-color: #ebf0ee;
   margin: 24px 24px;
-  display: grid;
   align-items: flex-end;
 }
 
@@ -135,7 +135,9 @@ header {
   flex-wrap: wrap;
 }
 
-.lang li button {
+.button {
+  text-align: center;
+  padding-top: 17px;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -175,6 +177,7 @@ header {
   align-self: center;
   justify-self: center;
   margin-bottom: 0;
+  padding-top: 50px;
 }
 
 .diff-lang {
@@ -202,7 +205,7 @@ header {
   margin: 0;
 }
 
-.diff-lang li button {
+.diff-lang li {
   background-color: #fff;
   flex-wrap: wrap;
 }
