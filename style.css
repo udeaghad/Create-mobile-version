@@ -218,3 +218,40 @@ header {
   background-color: #008552;
   transform: translateY(3px);
 }
+
+.contact-me{
+  background-image: url(asset/images/contact-form\ background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#contact-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.label{
+  color: #FFFFFF; 
+  margin: 8px 0 10px;
+}
+#infos{
+  height: 20px;
+  padding: 10px;
+  font-size: 17px;
+  line-height: 20px;
+  color: #172b4d;
+  border: 1px solid #dcd6cf;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  outline: none;
+}
+#info{
+  padding: 5px 5px 0;
+  font-size: 15px;
+  line-height: 24px;
+  color: #797878;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  outline: none;
+  letter-spacing: 2px;
+}
