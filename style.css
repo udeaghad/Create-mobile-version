@@ -223,6 +223,7 @@ header {
   background-image: url(asset/images/contact-form\ background.png);
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 2;
 }
 #contact-form{
   display: flex;
@@ -232,7 +233,7 @@ header {
 }
 .label{
   color: #FFFFFF; 
-  margin: 8px 0 10px;
+  margin: 8px 0 60px;
 }
 #infos{
   height: 20px;
@@ -254,4 +255,31 @@ header {
   border-radius: 8px;
   outline: none;
   letter-spacing: 2px;
+}
+.button1{
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 12px;
+position: static;
+left: 99px;
+top: calc(50% - 48px/2 + 141px);
+background: #36B37F;
+border-radius: 4px;
+flex: none;
+order: 3;
+flex-grow: 0;
+margin: 24px 0px;
+border: 1px solid #cfd8dc;
+color: white;
+}
+
+form ul{
+  list-style: none;
+}
+.social{
+  left: 48.38%;
+  right: 46.29%;
+  top: 60.48%;
+  bottom: 5.29%;
 }
