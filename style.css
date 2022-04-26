@@ -67,9 +67,6 @@ header {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  
-
-  
 }
 
 .bar:hover {
@@ -170,7 +167,7 @@ header {
 .about-me-pg {
   margin: 24px 24px;
   background-image: url("asset/images/back-img-about-me.png");
-  background-size:cover;
+  background-size: cover;
   display: grid;
   padding: 0;
   max-width: 100%;
