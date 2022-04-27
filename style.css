@@ -275,12 +275,14 @@ form ul {
   text-decoration: none;
 }
 
-#info:valid,
-#more-info:valid {
+#text:valid,
+#more-info:valid,
+#email:valid {
   border: 1px solid #008552;
 }
 
-#info:invalid,
-#more-info:invalid {
+#text:invalid,
+#more-info:invalid,
+#email:invalid {
   border: 1px solid red;
 }
