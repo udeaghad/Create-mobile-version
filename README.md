@@ -34,6 +34,11 @@ Usage
 - Twitter: [@theodoz](https://twitter.com/theodoz)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/dozie-udeagha/)
 
+👤 **Youta Christabelle**
+
+- GitHub: [@Christabelle143](https://github.com/Christabelle143)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
