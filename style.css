@@ -53,6 +53,20 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
 }
 
 .who-am-i {
@@ -298,25 +312,7 @@ footer {
   display: none;
 }
 
-.about-me {
- animation-duration: 3s;
- animation-name: slidein;
-
-}
-
-@keyframes slidein {
-  from {
-    margin-top: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-top: 0%;
-    width: 100%;
-  }
-}
-
-.contact-me h3{
+.contact-me h3 {
   color: #172b4d;
   transition-property: color;
   transition-duration: 4s;
@@ -324,7 +320,7 @@ footer {
 }
 
 .contact-me h3:hover {
-   color: #36b37f;
+  color: #36b37f;
 }
 
 @media screen and (min-width: 768px) {
@@ -408,4 +404,3 @@ footer {
     display: contents;
   }
 }
-
