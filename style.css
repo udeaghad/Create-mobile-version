@@ -84,7 +84,7 @@ header {
 }
 
 .recent-works {
-  margin: 24px 0px;
+  margin: 24px 0;
 }
 
 .collapse-button {
@@ -242,7 +242,6 @@ form .button {
   background-image: url("asset/images/contact-mobile-background.png");
   background-size: cover;
   min-height: 100vh;
-  /*max-width: 100%;*/
   margin: 0 24px;
 }
 
@@ -278,10 +277,9 @@ form ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
-
 
 .contact-add {
   font-family: Arial, Helvetica, sans-serif;
@@ -293,7 +291,7 @@ form ul {
 
 .contact-add a {
   text-decoration: none;
-  color:#344563;
+  color: #344563;
 }
 
 footer {
@@ -342,8 +340,8 @@ footer {
   }
 
   .recent-works {
-    margin: 48px 0px;
-    padding: 80px 0px;
+    margin: 48px 0;
+    padding: 80px 0;
   }
 
   .story-container {
@@ -354,7 +352,7 @@ footer {
 
   .about-me-pg {
     background-image: url("asset/images/about-me-desktop.png");
-    margin: 48px 0px;
+    margin: 48px 0;
   }
 
   .lang-container {
