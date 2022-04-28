@@ -90,6 +90,10 @@ header {
   align-items: center;
 }
 
+.recent-works {
+  margin: 24px;
+}
+
 .works-heading {
   font-size: 50px;
   font-family: Arial, Helvetica, sans-serif;
@@ -294,16 +298,22 @@ footer {
   display: none;
 }
 
-#text:valid,
-#more-info:valid,
-#email:valid {
-  border: 1px solid #008552;
+.about-me {
+ animation-duration: 3s;
+ animation-name: slidein;
+
 }
 
-#text:invalid,
-#more-info:invalid,
-#email:invalid button {
-  border: 1px solid red;
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) {
