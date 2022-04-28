@@ -316,6 +316,17 @@ footer {
   }
 }
 
+.contact-me h3{
+  color: #172b4d;
+  transition-property: color;
+  transition-duration: 4s;
+  transition-delay: 1s;
+}
+
+.contact-me h3:hover {
+   color: #36b37f;
+}
+
 @media screen and (min-width: 768px) {
   header {
     display: none;
@@ -397,3 +408,4 @@ footer {
     display: contents;
   }
 }
+
