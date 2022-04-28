@@ -15,7 +15,7 @@ header {
 
 .logo {
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   font-size: 30px;
   font-weight: bolder;
   color: #28352f;
@@ -23,9 +23,13 @@ header {
 
 .background-image {
   background-image: url("asset/images/header-illsutration-mobile@2x.png");
-  min-height: 100vh;
   background-size: cover;
+  min-height: 100vh;
   max-width: 100%;
+}
+
+.desktop-header {
+  display: none;
 }
 
 .bar {
@@ -47,6 +51,22 @@ header {
   margin: 24px 24px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-top: 0%;
+    width: 100%;
+  }
 }
 
 .who-am-i {
@@ -82,6 +102,10 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.recent-works {
+  margin: 24px;
 }
 
 .works-heading {
@@ -143,9 +167,9 @@ header {
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: #3a4a42;
+  color: #36b37f;
   background-color: #ebf0ee;
-  height: 48px;
+  height: 32px;
   width: 120px;
   border: none;
   border-radius: 4px;
@@ -161,7 +185,10 @@ header {
   border: none;
   border-radius: 4px;
   margin-bottom: 24px;
-  padding: 5px;
+
+  /* padding: 17px; */
+  height: 32px;
+  text-align: center;
 }
 
 .about-me-pg {
@@ -211,8 +238,14 @@ header {
   flex-wrap: wrap;
 }
 
+form .button {
+  height: 60px;
+  padding-top: 0;
+}
+
 .button:hover {
   background-color: #36b37f;
+  color: #ebf0ee;
 }
 
 .button:active {
@@ -275,14 +308,99 @@ form ul {
   text-decoration: none;
 }
 
-#text:valid,
-#more-info:valid,
-#email:valid {
-  border: 1px solid #008552;
+footer {
+  display: none;
 }
 
-#text:invalid,
-#more-info:invalid,
-#email:invalid {
-  border: 1px solid red;
+.contact-me h3 {
+  color: #172b4d;
+  transition-property: color;
+  transition-duration: 4s;
+  transition-delay: 1s;
+}
+
+.contact-me h3:hover {
+  color: #36b37f;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: none;
+  }
+
+  .background-image {
+    background-image: url("asset/images/desktop-background.png");
+    background-size: cover;
+    min-height: 100vh;
+    max-width: 100%;
+  }
+
+  .desktop-header {
+    display: contents;
+  }
+
+  .desktop-header ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+  }
+
+  .desktop-item {
+    color: #172b4d;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+  }
+
+  .i-can-do {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: #172b4d;
+    text-align: center;
+    width: 720px;
+    justify-self: center;
+  }
+
+  .story-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .about-me-pg {
+    background-image: url("asset/images/about-me-desktop.png");
+  }
+
+  .lang-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .contact-me {
+    background-image: url("asset/images/contact-me-back-desktop.png");
+  }
+
+  .contact-me-background {
+    display: flex;
+  }
+
+  .contact-me-background div {
+    width: 40%;
+  }
+
+  .contact-me-background form {
+    width: 60%;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  footer {
+    display: contents;
+  }
 }
