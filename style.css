@@ -15,23 +15,22 @@ header {
 
 .logo {
   text-decoration: none;
-  font-family:san;
+  font-family: sans-serif;
   font-size: 30px;
   font-weight: bolder;
   color: #28352f;
 }
 
-
-.background-image {  
+.background-image {
   background-image: url("asset/images/header-illsutration-mobile@2x.png");
   background-size: cover;
-  min-height: 100vh;  
+  min-height: 100vh;
   max-width: 100%;
-  }
+}
 
-  .desktop-header {
-    display: none;
-  }
+.desktop-header {
+  display: none;
+}
 
 .bar {
   height: 40px;
@@ -53,7 +52,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
- align-items: center;
+  align-items: center;
 }
 
 .who-am-i {
@@ -150,9 +149,9 @@ header {
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color:#36b37f;
+  color: #36b37f;
   background-color: #ebf0ee;
-  height: 48px;
+  height: 32px;
   width: 120px;
   border: none;
   border-radius: 4px;
@@ -168,7 +167,10 @@ header {
   border: none;
   border-radius: 4px;
   margin-bottom: 24px;
-  padding: 5px;
+
+  /* padding: 17px; */
+  height: 32px;
+  text-align: center;
 }
 
 .about-me-pg {
@@ -218,9 +220,14 @@ header {
   flex-wrap: wrap;
 }
 
+form .button {
+  height: 60px;
+  padding-top: 0;
+}
+
 .button:hover {
   background-color: #36b37f;
-  color:#ebf0ee;
+  color: #ebf0ee;
 }
 
 .button:active {
@@ -234,10 +241,6 @@ header {
   min-height: 100vh;
   max-width: 100%;
   margin: 0 24px;
-  
-  
-  
-  
 }
 
 #contact-form {
@@ -287,6 +290,10 @@ form ul {
   text-decoration: none;
 }
 
+footer {
+  display: none;
+}
+
 #text:valid,
 #more-info:valid,
 #email:valid {
@@ -295,99 +302,88 @@ form ul {
 
 #text:invalid,
 #more-info:invalid,
-#email:invalid {
+#email:invalid button {
   border: 1px solid red;
 }
 
-@media screen and (min-width: 768px){
-
-  .logo,
-  .menu-bar {
+@media screen and (min-width: 768px) {
+  header {
     display: none;
   }
-  .background-image { 
-  background-image: url("asset/images/desktop-background.png");
-  background-size: cover;
-  min-height: 100vh;  
-  max-width: 100%;
-} 
 
-
-
-.desktop-header {
-  display: contents;
+  .background-image {
+    background-image: url("asset/images/desktop-background.png");
+    background-size: cover;
+    min-height: 100vh;
+    max-width: 100%;
   }
 
-.desktop-header ul {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  
-}
+  .desktop-header {
+    display: contents;
+  }
 
-.desktop-item {
-  color: #172b4d;
-  font-size: 14px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-}
+  .desktop-header ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+  }
 
-.i-can-do {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  color: #172b4d;
-  text-align: center;
-  width: 720px;
-  justify-self: center;
-}
+  .desktop-item {
+    color: #172b4d;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+  }
 
-.story-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  
-  
-}
+  .i-can-do {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: #172b4d;
+    text-align: center;
+    width: 720px;
+    justify-self: center;
+  }
 
-.about-me-pg {
-  background-image: url("asset/images/about-me-desktop.png");
- }
+  .story-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 
- .lang-container {
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 1fr;
- }
+  .about-me-pg {
+    background-image: url("asset/images/about-me-desktop.png");
+  }
 
- .contact-me {
-   
-   background-image: none;
- }
+  .lang-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 
- .contact-me {
-   background-image: url("asset/images/contact-me-back-desktop.png");
-     
-   }
+  .contact-me {
+    background-image: url("asset/images/contact-me-back-desktop.png");
+  }
 
-.contact-me-background {
-  display: flex;  
-}
+  .contact-me-background {
+    display: flex;
+  }
 
-.contact-me-background div {
-  width: 40%;
-}
+  .contact-me-background div {
+    width: 40%;
+  }
 
-.contact-me-background form {
-  width: 60%;
-}
+  .contact-me-background form {
+    width: 60%;
+  }
 
-}
-  
+  .footer {
+    display: none;
+  }
 
-  
-   
-
+  footer {
+    display: contents;
+  }
 }
