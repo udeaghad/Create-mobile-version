@@ -15,18 +15,23 @@ header {
 
 .logo {
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:san;
   font-size: 30px;
   font-weight: bolder;
   color: #28352f;
 }
 
-.background-image {
+
+.background-image {  
   background-image: url("asset/images/header-illsutration-mobile@2x.png");
-  min-height: 100vh;
   background-size: cover;
+  min-height: 100vh;  
   max-width: 100%;
-}
+  }
+
+  .desktop-header {
+    display: none;
+  }
 
 .bar {
   height: 40px;
@@ -47,6 +52,8 @@ header {
   margin: 24px 24px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+ align-items: center;
 }
 
 .who-am-i {
@@ -143,7 +150,7 @@ header {
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: #3a4a42;
+  color:#36b37f;
   background-color: #ebf0ee;
   height: 48px;
   width: 120px;
@@ -213,6 +220,7 @@ header {
 
 .button:hover {
   background-color: #36b37f;
+  color:#ebf0ee;
 }
 
 .button:active {
@@ -226,6 +234,8 @@ header {
   min-height: 100vh;
   max-width: 100%;
   margin: 0 24px;
+  
+  
 }
 
 #contact-form {
@@ -285,4 +295,84 @@ form ul {
 #more-info:invalid,
 #email:invalid {
   border: 1px solid red;
+}
+
+@media screen and (min-width: 768px){
+
+  .logo,
+  .menu-bar {
+    display: none;
+  }
+  .background-image { 
+  background-image: url("asset/images/desktop-background.png");
+  background-size: cover;
+  min-height: 100vh;  
+  max-width: 100%;
+} 
+
+
+
+.desktop-header {
+  display: contents;
+  }
+
+.desktop-header ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  
+}
+
+.desktop-item {
+  color: #172b4d;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.i-can-do {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #172b4d;
+  text-align: center;
+  width: 720px;
+  justify-self: center;
+}
+
+.story-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  
+  
+}
+
+.about-me-pg {
+  background-image: url("asset/images/about-me-desktop.png");
+ }
+
+ .lang-container {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 1fr;
+ }
+
+ .contact-me {
+   
+   background-image: none;
+ }
+
+ .contact-me {
+   background-image: url("asset/images/contact-me-back-desktop.png");
+     
+   }
+
+  
+
+  
+   
+
 }
