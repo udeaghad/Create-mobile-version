@@ -236,6 +236,8 @@ header {
   margin: 0 24px;
   
   
+  
+  
 }
 
 #contact-form {
@@ -370,6 +372,19 @@ form ul {
      
    }
 
+.contact-me-background {
+  display: flex;  
+}
+
+.contact-me-background div {
+  width: 40%;
+}
+
+.contact-me-background form {
+  width: 60%;
+}
+
+}
   
 
   
