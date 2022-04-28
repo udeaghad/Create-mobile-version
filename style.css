@@ -5,7 +5,7 @@ main {
 }
 
 header {
-  height: 100px;
+  height: 50px;
   margin: 10px;
   display: flex;
   justify-content: space-between;
@@ -239,7 +239,7 @@ form .button {
 }
 
 .contact-me {
-  background-image: url("asset/images/header-illsutration-mobile@2x.png");
+  background-image: url("asset/images/contact-mobile-background.png");
   background-size: cover;
   min-height: 100vh;
   /*max-width: 100%;*/
