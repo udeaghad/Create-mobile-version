@@ -19,6 +19,12 @@ header {
   font-size: 30px;
   font-weight: bolder;
   color: #28352f;
+  transition: color 2s, transform 2s;
+}
+
+.logo:hover {
+  color: #36b37f;
+  transform: rotateX(360deg);
 }
 
 .background-image {
@@ -45,6 +51,22 @@ header {
   text-align: center;
   padding: 0 30px;
   color: #172b4d;
+  animation-duration: 1s;
+  animation-name: slidein;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    font-size: 50%;
+    width: 100%;
+  }
+
+  to {
+    font-size: 100%;
+    width: 300%;
+  }
 }
 
 .about-me {
