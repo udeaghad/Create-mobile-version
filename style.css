@@ -5,7 +5,7 @@ main {
 }
 
 header {
-  height: 100px;
+  height: 50px;
   margin: 10px;
   display: flex;
   justify-content: space-between;
@@ -53,20 +53,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-
-@keyframes slidein {
-  from {
-    margin-top: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-top: 0%;
-    width: 100%;
-  }
 }
 
 .who-am-i {
@@ -97,15 +83,16 @@ header {
   background-color: #008552;
 }
 
+.recent-works {
+  margin: 24px 0;
+}
+
 .collapse-button {
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.recent-works {
-  margin: 24px;
+  padding: 8px;
 }
 
 .works-heading {
@@ -185,8 +172,6 @@ header {
   border: none;
   border-radius: 4px;
   margin-bottom: 24px;
-
-  /* padding: 17px; */
   height: 32px;
   text-align: center;
 }
@@ -254,10 +239,9 @@ form .button {
 }
 
 .contact-me {
-  background-image: url(asset/images/contact-form-background.png);
+  background-image: url("asset/images/contact-mobile-background.png");
   background-size: cover;
   min-height: 100vh;
-  max-width: 100%;
   margin: 0 24px;
 }
 
@@ -269,7 +253,7 @@ form .button {
 #text,
 #email {
   height: 48px;
-  width: 95%;
+  width: 100%;
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
   color: #172b4d;
@@ -280,7 +264,7 @@ form .button {
 
 #more-info {
   height: 200px;
-  width: 95%;
+  width: 100%;
   border: 1px solid #d0d9d4;
   font-size: 24px;
   font-family: Arial, Helvetica, sans-serif;
@@ -293,11 +277,12 @@ form ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin: 0;
+  padding: 0;
 }
 
 .contact-add {
   font-family: Arial, Helvetica, sans-serif;
-  color: #42526e;
   font-size: 20px;
   text-align: center;
   margin: 24px;
@@ -306,21 +291,11 @@ form ul {
 
 .contact-add a {
   text-decoration: none;
+  color: #344563;
 }
 
 footer {
   display: none;
-}
-
-.contact-me h3 {
-  color: #172b4d;
-  transition-property: color;
-  transition-duration: 4s;
-  transition-delay: 1s;
-}
-
-.contact-me h3:hover {
-  color: #36b37f;
 }
 
 @media screen and (min-width: 768px) {
@@ -364,6 +339,11 @@ footer {
     justify-self: center;
   }
 
+  .recent-works {
+    margin: 48px 0;
+    padding: 80px 0;
+  }
+
   .story-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -372,6 +352,7 @@ footer {
 
   .about-me-pg {
     background-image: url("asset/images/about-me-desktop.png");
+    margin: 48px 0;
   }
 
   .lang-container {
