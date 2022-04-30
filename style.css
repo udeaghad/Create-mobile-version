@@ -24,7 +24,7 @@ header {
 
 .logo:hover {
   color: #36b37f;
-  transform: rotateX(360deg);
+  transform: rotateY(360deg);
 }
 
 .background-image {
