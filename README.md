@@ -8,6 +8,8 @@ The project was done to test the knowledge of linters, HTML, CSS and use of figm
 - HTML
 - CSS
 
+## Live Demo
+https://udeaghad.github.io/Create-mobile-version/
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
