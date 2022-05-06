@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 main {
   display: grid;
   flex-direction: column;
@@ -170,7 +175,8 @@ header {
   flex-wrap: wrap;
 }
 
-.button {
+.button,
+.btn {
   text-align: center;
   padding-top: 17px;
   font-size: 16px;
@@ -183,6 +189,7 @@ header {
   border: none;
   border-radius: 4px;
   flex-wrap: wrap;
+  margin-bottom: 15px;
 }
 
 .project-button {
@@ -250,7 +257,8 @@ form .button {
   padding-top: 0;
 }
 
-.button:hover {
+.button:hover,
+.btn:hover {
   background-color: #36b37f;
   color: #ebf0ee;
 }
