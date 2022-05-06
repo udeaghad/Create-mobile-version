@@ -1,5 +1,6 @@
-* { padding: 0;
-    margin: 0;    
+* {
+  padding: 0;
+  margin: 0;
 }
 
 main {
@@ -266,8 +267,6 @@ form .button {
   background-color: #008552;
   transform: translateY(3px);
 }
-
-
 
 .contact-me {
   background-image: url("asset/images/contact-mobile-background.png");
