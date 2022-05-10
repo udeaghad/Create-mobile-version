@@ -7,7 +7,6 @@ The project was done to test the knowledge of linters, HTML, CSS and use of figm
 
 - HTML
 - CSS
-- javascript
 
 ## Live Demo
 https://udeaghad.github.io/Create-mobile-version/
@@ -40,17 +39,6 @@ Usage
 👤 **Youta Christabelle**
 
 - GitHub: [@Christabelle143](https://github.com/Christabelle143)
-- 
- 👤 Bitsindou Van Inayat-khan
-
-   - GitHub: [@Khanetmoi](https://github.com/Khanetmoi)
-   - Twitter: [@InayatVan](https://twitter.com/InayatVan)
-   - LinkedIn: [Khan Bitsindou](https://www.linkedin.com/in/khan-bitsindou-b37178228/)
-
-👤 **Ali**
-
-- GitHub: [@aliatayee](https://github.com/aliatayee)
-- Twitter: [@aqaatayee](https://twitter.com/aqaatayee)
 
 
 ## 🤝 Contributing
