@@ -6,4 +6,6 @@ navBar.addEventListener('click', () => {
   menuBar.classList.toggle('change');
 });
 
-
+navList.addEventListener('click', () => {
+  navBar.click();
+});
