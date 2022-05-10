@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 main {
   display: grid;
   flex-direction: column;
@@ -5,12 +10,14 @@ main {
 }
 
 header {
-  height: 50px;
-  margin: 10px;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  margin-left: 24px;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
 }
 
 .logo {
@@ -32,15 +39,107 @@ header {
   background-size: cover;
   min-height: 100vh;
   max-width: 100%;
+  margin-top: 60px;
 }
 
 .desktop-header {
   display: none;
 }
 
+.nav-bar {
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  top: 30px;
+  right: 40px;
+  cursor: pointer;
+  transition: right 8s ease;
+}
+
 .bar {
-  height: 40px;
-  margin: 7px;
+  height: 3px;
+  margin: 3px;
+  background-color: black;
+  width: 100%;
+  transition: all 0.8s;
+}
+
+.menu-bar {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  width: 100%;
+  right: -100%;
+  position: fixed;
+  background-color: #fff;
+  height: 100vh;
+}
+
+.nav-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 24px;
+}
+
+.change .line-1 {
+  transform: rotateZ(-45deg) translate(-6px, 2px);
+}
+
+.change .line-2 {
+  opacity: 0;
+}
+
+.change .line-3 {
+  transform: rotateZ(45deg) translate(-6px, -2px);
+}
+
+.change {
+  left: 0;
+}
+
+.nav-list {
+  text-align: left;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #28352f;
+  position: relative;
+  padding: 5px;
+}
+
+.nav-item {
+  list-style: none;
+  margin: 25px;
+}
+
+.nav-link::before,
+.nav-link::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #008552;
+  position: absolute;
+  transform: scaleX(0);
+  transition: 0.5s;
+  left: 0;
+}
+
+.nav-link::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+.nav-link::before {
+  top: 0;
+  transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+  transform: scaleX(1);
 }
 
 .intro,
@@ -51,22 +150,6 @@ header {
   text-align: center;
   padding: 0 30px;
   color: #172b4d;
-  animation-duration: 1s;
-  animation-name: slidein;
-  animation-iteration-count: 3;
-  animation-direction: alternate;
-}
-
-@keyframes slidein {
-  from {
-    font-size: 50%;
-    width: 100%;
-  }
-
-  to {
-    font-size: 100%;
-    width: 300%;
-  }
 }
 
 .about-me {
@@ -95,14 +178,6 @@ header {
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
-
-.bar:hover {
-  background-color: #36b37f;
-}
-
-.bar:active {
-  background-color: #008552;
 }
 
 .recent-works {
@@ -193,7 +268,7 @@ header {
   background-color: #36b37f;
   border: none;
   border-radius: 4px;
-  margin-bottom: 24px;
+  margin: 24px 0;
   height: 32px;
   text-align: center;
 }
