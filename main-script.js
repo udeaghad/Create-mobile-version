@@ -16,11 +16,15 @@ const modalInfo = {
   image: "asset/images/modal-image.png",
   tech:
     [
-      "Ruby", "CSS", "Java"
+      "Ruby on rails", "CSS", "Java"
     ],
   link: [
     "Source link", "See Source"
     ],
+
+  icon: [
+    "asset/images/java-git.png", "asset/images/link-java.png"
+  ]
 
 }
 
@@ -116,15 +120,39 @@ const sourceContainer = document.querySelectorAll(".source-container")
 for (let i = 0; i < sourceContainer.length; i++){
 
 const sourceLive = document.createElement("div");
-sourceLive.classList.add("button", "project-button");
+sourceLive.classList.add("resume", "project-button", "modal-icon-1");
 sourceContainer[i].appendChild(sourceLive)
 sourceLive.innerText = modalInfo["link"][0];
 
 const seeSource = document.createElement("div");
-seeSource.classList.add("button", "project-button");
+seeSource.classList.add("resume", "project-button", "modal-icon-2");
 sourceContainer[i].appendChild(seeSource)
 seeSource.innerText = modalInfo["link"][1];
+
 }
+
+const linkIcon1 = document.querySelectorAll(".modal-icon-1");
+const linkIcon2 = document.querySelectorAll(".modal-icon-2");
+
+for (let i =0; i < linkIcon1.length; i++){
+const linkIconImg = document.createElement("img");
+linkIconImg.classList.add("link-icon-img");
+linkIcon1[i].appendChild(linkIconImg);
+linkIconImg.src = modalInfo["icon"][0];
+linkIconImg.alt = "source link icon"
+}
+
+
+
+for (let i =0; i < linkIcon2.length; i++){
+const linkIconImg = document.createElement("img");
+linkIconImg.classList.add("link-icon-img");
+linkIcon2[i].appendChild(linkIconImg);
+linkIconImg.src = modalInfo["icon"][1];
+linkIconImg.alt = "source link icon"
+}
+
+
 
 const overlay = document.querySelectorAll(".overlay");
 const btnCloseModal = document.querySelectorAll(".close-modal")
@@ -134,14 +162,14 @@ for (let i = 0; i < modal.length; i++){
 
   modal[i].classList.toggle("hidden");
   overlay[i].classList.toggle("hidden");
-};
+}
 };
 
 
 for (let i = 0; i < projectButton.length; i++){
 projectButton[i].addEventListener("click", openAndClose);
-}
+ }
 
 for (let i = 0; i < btnCloseModal.length; i++){
     btnCloseModal[i].addEventListener("click", openAndClose);
-  }
+}
