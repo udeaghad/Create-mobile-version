@@ -10,206 +10,183 @@ navList.addEventListener('click', () => {
   navBar.click();
 });
 
-const modalInfo = {
-  name: "Keeping track of hundreds of components",
-  description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-  image: [
-    "asset/images/modal-image.png", "asset/images/modal-img-desktop.jpg"
-  ],
-  tech:
-    [
-      "Ruby on rails", "CSS", "Java", "Codekit", "GitHub", "Javascript", "Bootstrap", "terminal", "Codepen"
-    ],
-  link: [
-    "Source link", "See Source"
-    ],
+const {
+  prName = 'Keeping track of hundreds of components',
+  description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+  tech = ['Ruby on rails', 'CSS', 'Java', 'Codekit', 'GitHub', 'Javascript', 'Bootstrap', 'terminal', 'Codepen'],
+  link = ['Source link', 'See Source'],
+  icon = ['asset/images/java-git.png', 'asset/images/link-java.png'],
+  image = ['asset/images/modal-image.png', 'asset/images/modal-img-desktop.jpg'],
+} = ['modalInfo'];
 
-  icon: [
-    "asset/images/java-git.png", "asset/images/link-java.png"
-  ]
+const techName = (num) => tech[num];
 
+const linkName = (num) => link[num];
+
+const iconName = (num) => icon[num];
+
+const imageName = (num) => image[num];
+
+const projectCard = document.querySelectorAll('.place-holder');
+
+for (let i = 0; i < projectCard.length; i += 1) {
+  const modal = document.createElement('div');
+  modal.classList.add('modal', 'hidden');
+  projectCard[i].appendChild(modal);
+
+  const overlay = document.createElement('div');
+  overlay.classList.add('overlay', 'hidden');
+  projectCard[i].appendChild(overlay);
 }
 
-const projectCard = document.querySelectorAll(".place-holder");
+const projectButton = document.querySelectorAll('.project-button');
 
-
-for (let i = 0; i < projectCard.length; i++){
-const modal = document.createElement("div");
-modal.classList.add("modal", "hidden");
-projectCard[i].appendChild(modal);
-
-
-const overlay = document.createElement("div");
-overlay.classList.add("overlay", "hidden");
-projectCard[i].appendChild(overlay)
+for (let i = 0; i < projectButton.length; i += 1) {
+  projectButton[i].classList.add('show-modal');
 }
 
-const projectButton = document.querySelectorAll(".project-button");
+const modal = document.querySelectorAll('.modal');
+for (let i = 0; i < modal.length; i += 1) {
+  const imgContainer = document.createElement('div');
+  imgContainer.classList.add('img-container');
+  modal[i].appendChild(imgContainer);
 
-for (let i = 0; i < projectButton.length; i++){
-projectButton[i].classList.add("show-modal");
+  const modalHeading = document.createElement('h1');
+  modalHeading.classList.add('modal-heading');
+  modal[i].appendChild(modalHeading);
+  modalHeading.innerText = prName;
 
+  const techContainer = document.createElement('div');
+  techContainer.classList.add('tech-container');
+  modal[i].appendChild(techContainer);
+
+  const modalDesc = document.createElement('p');
+  modalDesc.classList.add('modal-desc');
+  modal[i].appendChild(modalDesc);
+  modalDesc.innerText = description;
+
+  const sourceContainer = document.createElement('div');
+  sourceContainer.classList.add('source-container');
+  modal[i].appendChild(sourceContainer);
 }
 
-const modal = document.querySelectorAll(".modal")
- for (let i = 0; i < modal.length; i++){ 
-const imgContainer = document.createElement("div");
-imgContainer.classList.add("img-container");
-modal[i].appendChild(imgContainer)
+const imgContainer = document.querySelectorAll('.img-container');
 
-const modalHeading = document.createElement("h1");
-modalHeading.classList.add("modal-heading");
-modal[i].appendChild(modalHeading);
-modalHeading.innerText = modalInfo["name"]
+for (let i = 0; i < imgContainer.length; i += 1) {
+  const modalImg = document.createElement('img');
+  modalImg.classList.add('modal-img');
+  imgContainer[i].appendChild(modalImg);
+  modalImg.src = imageName(0);
+  modalImg.alt = 'modal image';
 
-const techContainer = document.createElement("div");
-techContainer.classList.add("tech-container");
-modal[i].appendChild(techContainer);
+  const modalImgDesk = document.createElement('img');
+  modalImgDesk.classList.add('modal-desk-img');
+  imgContainer[i].appendChild(modalImgDesk);
+  modalImgDesk.src = imageName(1);
+  modalImgDesk.alt = 'modal image';
 
-const modalDesc = document.createElement("p");
-modalDesc.classList.add("modal-desc");
-modal[i].appendChild(modalDesc);
-modalDesc.innerText = modalInfo["description"];
-
-const sourceContainer = document.createElement("div");
-sourceContainer.classList.add("source-container");
-modal[i].appendChild(sourceContainer);
+  const btnCloseModal = document.createElement('button');
+  btnCloseModal.classList.add('close-modal');
+  imgContainer[i].appendChild(btnCloseModal);
+  btnCloseModal.innerText = 'X';
 }
 
-const imgContainer = document.querySelectorAll(".img-container")
+const techContainer = document.querySelectorAll('.tech-container');
 
-for (let i = 0;i < imgContainer.length; i++){ 
-const modalImg = document.createElement("img");
-modalImg.classList.add("modal-img");
-imgContainer[i].appendChild(modalImg);
-modalImg.src = modalInfo["image"][0];
-modalImg.alt = "modal image";
+for (let i = 0; i < techContainer.length; i += 1) {
+  const rubyLink = document.createElement('div');
+  rubyLink.classList.add('btn', 'mob-btn');
+  techContainer[i].appendChild(rubyLink);
+  rubyLink.innerText = techName(0);
 
-const modalImgDesk = document.createElement ("img")
-modalImgDesk.classList.add("modal-desk-img");
-imgContainer[i].appendChild(modalImgDesk);
-modalImgDesk.src = modalInfo["image"][1];
-modalImgDesk.alt = "modal image";
+  const cssLink = document.createElement('div');
+  cssLink.classList.add('btn', 'mob-btn');
+  techContainer[i].appendChild(cssLink);
+  cssLink.innerText = techName(1);
 
-const btnCloseModal = document.createElement("button");
-btnCloseModal.classList.add("close-modal");
-imgContainer[i].appendChild(btnCloseModal);
-btnCloseModal.innerText = "X";
+  const javaLink = document.createElement('div');
+  javaLink.classList.add('btn', 'mob-btn');
+  techContainer[i].appendChild(javaLink);
+  javaLink.innerText = techName(5);
+
+  const codekitLink = document.createElement('div');
+  codekitLink.classList.add('btn', 'desk-btn');
+  techContainer[i].appendChild(codekitLink);
+  codekitLink.innerText = techName(3);
+
+  const githubLink = document.createElement('div');
+  githubLink.classList.add('btn', 'desk-btn');
+  techContainer[i].appendChild(githubLink);
+  githubLink.innerText = techName(4);
+
+  const scriptLink = document.createElement('div');
+  scriptLink.classList.add('btn', 'desk-btn');
+  techContainer[i].appendChild(scriptLink);
+  scriptLink.innerText = techName(5);
+
+  const bootsLink = document.createElement('div');
+  bootsLink.classList.add('btn', 'desk-btn');
+  techContainer[i].appendChild(bootsLink);
+  bootsLink.innerText = techName(6);
+
+  const terminalLink = document.createElement('div');
+  terminalLink.classList.add('btn', 'desk-btn');
+  techContainer[i].appendChild(terminalLink);
+  terminalLink.innerText = techName(7);
+
+  const codepenLink = document.createElement('div');
+  codepenLink.classList.add('btn', 'desk-btn');
+  techContainer[i].appendChild(codepenLink);
+  codepenLink.innerText = techName(8);
 }
 
+const sourceContainer = document.querySelectorAll('.source-container');
 
-const techContainer = document.querySelectorAll(".tech-container")
+for (let i = 0; i < sourceContainer.length; i += 1) {
+  const sourceLive = document.createElement('div');
+  sourceLive.classList.add('resume', 'project-button', 'modal-icon-1');
+  sourceContainer[i].appendChild(sourceLive);
+  sourceLive.innerText = linkName(0);
 
-for  (let i = 0; i < techContainer.length; i++){ 
-const rubyLink = document.createElement("div");
-rubyLink.classList.add("btn", "mob-btn");
-techContainer[i].appendChild(rubyLink)
-rubyLink.innerText = modalInfo["tech"][0];
-
-
-const cssLink = document.createElement("div");
-cssLink.classList.add("btn", "mob-btn");
-techContainer[i].appendChild(cssLink)
-cssLink.innerText = modalInfo["tech"][1];
-
-
-const javaLink = document.createElement("div");
-javaLink.classList.add("btn", "mob-btn");
-techContainer[i].appendChild(javaLink)
-javaLink.innerText = modalInfo["tech"][5];
-
-const codekitLink = document.createElement("div");
-codekitLink.classList.add("btn", "desk-btn");
-techContainer[i].appendChild(codekitLink)
-codekitLink.innerText = modalInfo["tech"][3];
-
-const githubLink = document.createElement("div");
-githubLink.classList.add("btn", "desk-btn");
-techContainer[i].appendChild(githubLink)
-githubLink.innerText = modalInfo["tech"][4];
-
-const scriptLink = document.createElement("div");
-scriptLink.classList.add("btn", "desk-btn");
-techContainer[i].appendChild(scriptLink)
-scriptLink.innerText = modalInfo["tech"][5];
-
-const bootsLink = document.createElement("div");
-bootsLink.classList.add("btn", "desk-btn");
-techContainer[i].appendChild(bootsLink)
-bootsLink.innerText = modalInfo["tech"][6];
-
-const terminalLink = document.createElement("div");
-terminalLink.classList.add("btn", "desk-btn");
-techContainer[i].appendChild(terminalLink)
-terminalLink.innerText = modalInfo["tech"][7];
-
-const codepenLink = document.createElement("div");
-codepenLink.classList.add("btn", "desk-btn");
-techContainer[i].appendChild(codepenLink)
-codepenLink.innerText = modalInfo["tech"][8];
-
-
+  const seeSource = document.createElement('div');
+  seeSource.classList.add('resume', 'project-button', 'modal-icon-2');
+  sourceContainer[i].appendChild(seeSource);
+  seeSource.innerText = linkName(1);
 }
 
+const linkIcon1 = document.querySelectorAll('.modal-icon-1');
+const linkIcon2 = document.querySelectorAll('.modal-icon-2');
 
-
-
-
-const sourceContainer = document.querySelectorAll(".source-container")
-
-for (let i = 0; i < sourceContainer.length; i++){
-
-const sourceLive = document.createElement("div");
-sourceLive.classList.add("resume", "project-button", "modal-icon-1");
-sourceContainer[i].appendChild(sourceLive)
-sourceLive.innerText = modalInfo["link"][0];
-
-const seeSource = document.createElement("div");
-seeSource.classList.add("resume", "project-button", "modal-icon-2");
-sourceContainer[i].appendChild(seeSource)
-seeSource.innerText = modalInfo["link"][1];
-
+for (let i = 0; i < linkIcon1.length; i += 1) {
+  const linkIconImg = document.createElement('img');
+  linkIconImg.classList.add('link-icon-img');
+  linkIcon1[i].appendChild(linkIconImg);
+  linkIconImg.src = iconName(0);
+  linkIconImg.alt = 'source link icon';
 }
 
-const linkIcon1 = document.querySelectorAll(".modal-icon-1");
-const linkIcon2 = document.querySelectorAll(".modal-icon-2");
-
-for (let i =0; i < linkIcon1.length; i++){
-const linkIconImg = document.createElement("img");
-linkIconImg.classList.add("link-icon-img");
-linkIcon1[i].appendChild(linkIconImg);
-linkIconImg.src = modalInfo["icon"][0];
-linkIconImg.alt = "source link icon"
+for (let i = 0; i < linkIcon2.length; i += 1) {
+  const linkIconImg = document.createElement('img');
+  linkIconImg.classList.add('link-icon-img');
+  linkIcon2[i].appendChild(linkIconImg);
+  linkIconImg.src = iconName(1);
+  linkIconImg.alt = 'source link icon';
 }
 
+const overlay = document.querySelectorAll('.overlay');
+const btnCloseModal = document.querySelectorAll('.close-modal');
 
-
-for (let i =0; i < linkIcon2.length; i++){
-const linkIconImg = document.createElement("img");
-linkIconImg.classList.add("link-icon-img");
-linkIcon2[i].appendChild(linkIconImg);
-linkIconImg.src = modalInfo["icon"][1];
-linkIconImg.alt = "source link icon"
-}
-
-
-
-const overlay = document.querySelectorAll(".overlay");
-const btnCloseModal = document.querySelectorAll(".close-modal")
-
-const openAndClose = function () {
-for (let i = 0; i < modal.length; i++){
-
-  modal[i].classList.toggle("hidden");
-  overlay[i].classList.toggle("hidden");
-}
+const openAndClose = () => {
+  for (let i = 0; i < modal.length; i += 1) {
+    modal[i].classList.toggle('hidden');
+    overlay[i].classList.toggle('hidden');
+  }
 };
 
+for (let i = 0; i < projectButton.length; i += 1) {
+  projectButton[i].addEventListener('click', openAndClose);
+}
 
-for (let i = 0; i < projectButton.length; i++){
-projectButton[i].addEventListener("click", openAndClose);
- }
-
-for (let i = 0; i < btnCloseModal.length; i++){
-    btnCloseModal[i].addEventListener("click", openAndClose);
+for (let i = 0; i < btnCloseModal.length; i += 1) {
+  btnCloseModal[i].addEventListener('click', openAndClose);
 }
