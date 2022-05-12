@@ -13,7 +13,7 @@ navList.addEventListener('click', () => {
 const {
   prName = 'Keeping track of hundreds of components',
   description = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-  tech = ['Ruby on rails', 'CSS', 'Java', 'Codekit', 'GitHub', 'Javascript', 'Bootstrap', 'terminal', 'Codepen'],
+  tech = ['Ruby on rails', 'CSS', 'Java', 'Codekit', 'GitHub', 'Javascript', 'Bootstrap', 'terminal', 'Codepen', 'html'],
   link = ['Source link', 'See Source'],
   icon = ['asset/images/java-git.png', 'asset/images/link-java.png'],
   image = ['asset/images/modal-image.png', 'asset/images/modal-img-desktop.jpg'],
@@ -26,6 +26,69 @@ const linkName = (num) => link[num];
 const iconName = (num) => icon[num];
 
 const imageName = (num) => image[num];
+
+const projectContainer = document.querySelector('#portfolio');
+
+for (let i = 0; i < 6; i += 1) {
+  const cardHolder = document.createElement('div');
+  cardHolder.classList.add('place-holder');
+  projectContainer.appendChild(cardHolder);
+}
+const cardHolder = document.querySelectorAll('.place-holder');
+
+for (let i = 0; i < cardHolder.length; i += 1) {
+  const postStories = document.createElement('div');
+  postStories.classList.add('post-stories');
+  cardHolder[i].appendChild(postStories);
+}
+
+const postStories = document.querySelectorAll('.post-stories');
+
+for (let i = 0; i < postStories.length; i += 1) {
+  const multiStories = document.createElement('h2');
+  multiStories.classList.add('multi-post');
+  multiStories.innerText = 'Multi-Post Stories';
+  postStories[i].appendChild(multiStories);
+
+  const gainDiv = document.createElement('div');
+  gainDiv.classList.add('gain');
+  gainDiv.innerText = 'Gain+Glory';
+  postStories[i].appendChild(gainDiv);
+
+  const langList = document.createElement('ul');
+  langList.classList.add('lang-list');
+  postStories[i].appendChild(langList);
+
+  const projectBtn = document.createElement('button');
+  projectBtn.classList.add('button', 'project-button');
+  projectBtn.innerText = 'See Project';
+  postStories[i].appendChild(projectBtn);
+  projectBtn.type = 'button';
+}
+
+const langList = document.querySelectorAll('.lang-list');
+
+for (let i = 0; i < langList.length; i += 1) {
+  const rubyBtn = document.createElement('li');
+  rubyBtn.classList.add('btn');
+  rubyBtn.innerText = techName(0);
+  langList[i].appendChild(rubyBtn);
+
+  const cssBtn = document.createElement('li');
+  cssBtn.classList.add('btn');
+  cssBtn.innerText = techName(1);
+  langList[i].appendChild(cssBtn);
+
+  const jsBtn = document.createElement('li');
+  jsBtn.classList.add('btn');
+  jsBtn.innerText = techName(5);
+  langList[i].appendChild(jsBtn);
+
+  const htmlBtn = document.createElement('li');
+  htmlBtn.classList.add('btn');
+  htmlBtn.innerText = techName(9);
+  langList[i].appendChild(htmlBtn);
+}
 
 const projectCard = document.querySelectorAll('.place-holder');
 
