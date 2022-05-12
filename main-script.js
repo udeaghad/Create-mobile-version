@@ -13,10 +13,12 @@ navList.addEventListener('click', () => {
 const modalInfo = {
   name: "Keeping track of hundreds of components",
   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-  image: "asset/images/modal-image.png",
+  image: [
+    "asset/images/modal-image.png", "asset/images/modal-img-desktop.jpg"
+  ],
   tech:
     [
-      "Ruby on rails", "CSS", "Java"
+      "Ruby on rails", "CSS", "Java", "Codekit", "GitHub", "Javascript", "Bootstrap", "terminal", "Codepen"
     ],
   link: [
     "Source link", "See Source"
@@ -80,8 +82,14 @@ for (let i = 0;i < imgContainer.length; i++){
 const modalImg = document.createElement("img");
 modalImg.classList.add("modal-img");
 imgContainer[i].appendChild(modalImg);
-modalImg.src = modalInfo["image"];
+modalImg.src = modalInfo["image"][0];
 modalImg.alt = "modal image";
+
+const modalImgDesk = document.createElement ("img")
+modalImgDesk.classList.add("modal-desk-img");
+imgContainer[i].appendChild(modalImgDesk);
+modalImgDesk.src = modalInfo["image"][1];
+modalImgDesk.alt = "modal image";
 
 const btnCloseModal = document.createElement("button");
 btnCloseModal.classList.add("close-modal");
@@ -94,21 +102,53 @@ const techContainer = document.querySelectorAll(".tech-container")
 
 for  (let i = 0; i < techContainer.length; i++){ 
 const rubyLink = document.createElement("div");
-rubyLink.classList.add("btn");
+rubyLink.classList.add("btn", "mob-btn");
 techContainer[i].appendChild(rubyLink)
 rubyLink.innerText = modalInfo["tech"][0];
 
 
 const cssLink = document.createElement("div");
-cssLink.classList.add("btn");
+cssLink.classList.add("btn", "mob-btn");
 techContainer[i].appendChild(cssLink)
 cssLink.innerText = modalInfo["tech"][1];
 
 
 const javaLink = document.createElement("div");
-javaLink.classList.add("btn");
+javaLink.classList.add("btn", "mob-btn");
 techContainer[i].appendChild(javaLink)
-javaLink.innerText = modalInfo["tech"][2];
+javaLink.innerText = modalInfo["tech"][5];
+
+const codekitLink = document.createElement("div");
+codekitLink.classList.add("btn", "desk-btn");
+techContainer[i].appendChild(codekitLink)
+codekitLink.innerText = modalInfo["tech"][3];
+
+const githubLink = document.createElement("div");
+githubLink.classList.add("btn", "desk-btn");
+techContainer[i].appendChild(githubLink)
+githubLink.innerText = modalInfo["tech"][4];
+
+const scriptLink = document.createElement("div");
+scriptLink.classList.add("btn", "desk-btn");
+techContainer[i].appendChild(scriptLink)
+scriptLink.innerText = modalInfo["tech"][5];
+
+const bootsLink = document.createElement("div");
+bootsLink.classList.add("btn", "desk-btn");
+techContainer[i].appendChild(bootsLink)
+bootsLink.innerText = modalInfo["tech"][6];
+
+const terminalLink = document.createElement("div");
+terminalLink.classList.add("btn", "desk-btn");
+techContainer[i].appendChild(terminalLink)
+terminalLink.innerText = modalInfo["tech"][7];
+
+const codepenLink = document.createElement("div");
+codepenLink.classList.add("btn", "desk-btn");
+techContainer[i].appendChild(codepenLink)
+codepenLink.innerText = modalInfo["tech"][8];
+
+
 }
 
 
