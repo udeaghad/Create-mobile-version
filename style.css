@@ -389,6 +389,35 @@ form ul {
   padding: 0;
 }
 
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control {
+  text-align: left;
+}
+
+#email.success {
+  border-color: #008552;
+}
+
+#email.error {
+  border-color: red;
+  text-align: left;
+}
+
+small {
+  margin-bottom: 0;
+}
+
+form .error {
+  color: red;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0;
+  text-align: center;
+}
+
 .contact-add {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;

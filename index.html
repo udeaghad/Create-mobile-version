@@ -266,19 +266,21 @@
             </h3>
             </div>
 
-            <form id="contact-form" action="https://formspree.io/f/mrgjoqgg" method="post">
-                <ul>
-                    <li>
+            <form id="contact-form" action="https://formspree.io/f/xbjwqkbk" method="post">
+                <ul class="input-section">
+                    <li class="input-control form-info">
+                        <label for="text"></label>
                         
-                        <input type="text" id="text" placeholder="Full Name" name="User_name" maxlength="30" required>
+                        <input type="text" id="text" placeholder="Full Name" name="User_name" maxlength="30">
                     </li>
 
-                    <li>
-                       <input type="email" id="email" placeholder="E-mail address" name="e-mail" required>
+                    <li class="input-control form-info">
+                        <label for="email"></label>
+                       <input type="email" id="email" placeholder="E-mail address" name="e-mail">
                     </li>
-                    <li>
-                    
-                     <textarea id="more-info" name="more-info" placeholder="Enter your text here" maxlength="500" required></textarea>
+                    <li class="form-info">
+                    <label for="more-info"></label>
+                     <textarea id="more-info" name="more-info" placeholder="Enter your text here" maxlength="500"></textarea>
                     </li>
 
                     
@@ -361,7 +363,9 @@
            
         </footer>
     </main>
+<script src="validation.js"></script>
 <script src="main-script.js"></script>
+
     
 </body>
 </html>
