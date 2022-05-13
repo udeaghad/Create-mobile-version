@@ -389,6 +389,38 @@ form ul {
   padding: 0;
 }
 
+.input-control input:focus {
+  outline: 0;
+}
+
+#email.success {
+  border-color: #008552;
+
+}
+
+#email.error {
+  border-color: red;  
+  
+}
+
+small {
+  margin-bottom: 24px;
+}
+
+
+
+
+
+.input-control .error {
+  color: red;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 0;
+  
+}
+
+
+
 .contact-add {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -524,6 +556,8 @@ footer {
 .desk-btn {
   display: none;
 }
+
+
 
 @media screen and (min-width: 768px) {
   * {
