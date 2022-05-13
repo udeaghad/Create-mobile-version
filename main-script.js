@@ -313,7 +313,17 @@ function validateEmail(input, requiredMsg, invalidMsg) {
 const EMAIL_REQUIRED = "Please enter your email";
 const EMAIL_INVALID = "Please enter a valid email in lowercase";
 
+form.addEventListener("submit", function (event) {
+	
+	event.preventDefault();
 
+	
+	let emailValid = validateEmail(form.elements["email"], EMAIL_REQUIRED, EMAIL_INVALID);
+
+	if (emailValid) {
+		form.submit();
+	}
+});
 
 
 
